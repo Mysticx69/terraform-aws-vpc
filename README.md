@@ -1,3 +1,25 @@
+# AWS VPC Terraform module
+Terraform module which creates VPC resources on AWS.
+
+## Usage
+
+```hcl
+locals {
+  region                       = "us-east-1"
+  mockinfra_availability_zones = ["${local.region}a", "${local.region}b", "${local.region}c"]
+}
+
+module "vpc" {
+  source  = "git::https://github.com/Mysticx69/terraform-aws-vpc.git?ref=v1.0.0"
+
+  # insert required variables here
+  environment          = "MockInfra"
+  vpc_cidr             = "10.150.0.0/16"
+  public_subnets_cidr  = ["10.150.1.0/24", "10.150.2.0/24"]
+  private_subnets_cidr = ["10.150.10.0/24", "10.150.20.0/24"]
+  availability_zones   = local.mockinfra_availability_zones
+}
+ ```
 <!-- BEGINNING OF PRE-COMMIT-TERRAFORM DOCS HOOK -->
 ## Requirements
 
