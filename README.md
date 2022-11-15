@@ -1,4 +1,3 @@
-<<<<<<< HEAD
 # AWS VPC Terraform module
 Terraform module which creates VPC resources on AWS.
 
@@ -19,11 +18,8 @@ module "vpc" {
   public_subnets_cidr  = ["10.150.1.0/24", "10.150.2.0/24"]
   private_subnets_cidr = ["10.150.10.0/24", "10.150.20.0/24"]
   availability_zones   = local.mockinfra_availability_zones
-  TEST
 }
  ```
-=======
->>>>>>> parent of 88050a4... (docs) Updated README.MD
 <!-- BEGINNING OF PRE-COMMIT-TERRAFORM DOCS HOOK -->
 ## Requirements
 
