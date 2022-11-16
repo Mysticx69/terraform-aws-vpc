@@ -10,7 +10,7 @@ locals {
 }
 
 module "vpc" {
-  source  = "git::https://github.com/Mysticx69/terraform-aws-vpc.git?ref=v1.0.0"
+  source  = "git::https://github.com/Mysticx69/terraform-aws-vpc.git?ref=v1.0.2"
 
   # insert required variables here
   environment          = "MockInfra"
@@ -19,8 +19,7 @@ module "vpc" {
   private_subnets_cidr = ["10.150.10.0/24", "10.150.20.0/24"]
   availability_zones   = local.mockinfra_availability_zones
 
-  tags =
-  {
+  tags = {
     DeployedBy = "Terraform"
     Date = "xxxx"
     Author = "xxxx"
