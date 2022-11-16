@@ -18,6 +18,14 @@ module "vpc" {
   public_subnets_cidr  = ["10.150.1.0/24", "10.150.2.0/24"]
   private_subnets_cidr = ["10.150.10.0/24", "10.150.20.0/24"]
   availability_zones   = local.mockinfra_availability_zones
+
+  tags =
+  {
+    DeployedBy = "Terraform"
+    Date = "xxxx"
+    Author = "xxxx"
+    ...
+  }
 }
  ```
 <!-- BEGINNING OF PRE-COMMIT-TERRAFORM DOCS HOOK -->
