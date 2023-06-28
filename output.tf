@@ -4,22 +4,22 @@ output "default_sg_id" {
 }
 
 output "private_subnets_id" {
-  value       = [aws_subnet.private_subnet.*.id]
+  value       = [aws_subnet.private_subnet[*].id]
   description = "Output all private subnets ids in a list"
 }
 
 output "private_subnets_cidr" {
-  value       = [aws_subnet.private_subnet.*.cidr_block]
+  value       = [aws_subnet.private_subnet[*].cidr_block]
   description = "Output all CIDR block of private subnets in a list"
 }
 
 output "public_subnets_cidr" {
-  value       = [aws_subnet.public_subnet.*.cidr_block]
+  value       = [aws_subnet.public_subnet[*].cidr_block]
   description = "Output all CIDR block of public subnets in a list"
 }
 
 output "public_subnets_id" {
-  value       = [aws_subnet.public_subnet.*.id]
+  value       = [aws_subnet.public_subnet[*].id]
   description = "Output all public subnets ids in a list"
 }
 
