@@ -1,6 +1,12 @@
+##############################################################
+# Configure version constraints
+##############################################################
 terraform {
-  required_version = "~>1.3.3"
   required_providers {
-    aws = "~>4"
+    aws = {
+      source  = "hashicorp/aws"
+      version = "~>5.0"
+    }
   }
+  required_version = "~>1.0.0"
 }
