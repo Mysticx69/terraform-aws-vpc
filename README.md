@@ -27,19 +27,19 @@ module "vpc" {
   }
 }
  ```
-<!-- BEGINNING OF PRE-COMMIT-TERRAFORM DOCS HOOK -->
+<!-- BEGIN_TF_DOCS -->
 ## Requirements
 
 | Name | Version |
 |------|---------|
-| <a name="requirement_terraform"></a> [terraform](#requirement\_terraform) | >=1.0.0 |
+| <a name="requirement_terraform"></a> [terraform](#requirement\_terraform) | 1.9.5 |
 | <a name="requirement_aws"></a> [aws](#requirement\_aws) | ~>5.0 |
 
 ## Providers
 
 | Name | Version |
 |------|---------|
-| <a name="provider_aws"></a> [aws](#provider\_aws) | 5.5.0 |
+| <a name="provider_aws"></a> [aws](#provider\_aws) | 5.66.0 |
 
 ## Modules
 
@@ -92,4 +92,4 @@ No modules.
 | <a name="output_public_subnets_id"></a> [public\_subnets\_id](#output\_public\_subnets\_id) | Output all public subnets ids in a list |
 | <a name="output_vpc_cidr"></a> [vpc\_cidr](#output\_vpc\_cidr) | Output the CIDR block of VPC |
 | <a name="output_vpc_id"></a> [vpc\_id](#output\_vpc\_id) | Output the VPC id |
-<!-- END OF PRE-COMMIT-TERRAFORM DOCS HOOK -->
+<!-- END_TF_DOCS -->
